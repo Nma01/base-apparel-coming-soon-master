@@ -46,7 +46,7 @@ function getUserInput(e) {
     alert("Thank you! We will contact you shortly.")
 
     // Prints result to the terminal
-    console.log(`Valid emails: ${emailArray}`);
+    console.log(`Emails: ${emailArray}`);
   }
 
   // **  removes the errortext and errorIcon after 2secs
