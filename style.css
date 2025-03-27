@@ -76,7 +76,6 @@ header {
 .slider:focus-within {
   border: 1px solid hsl(0, 93%, 68%);
   border-radius: 50px;
-
   border-right: none;
 }
 

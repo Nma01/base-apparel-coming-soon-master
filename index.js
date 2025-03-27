@@ -13,8 +13,8 @@ function validEmail(email) {
     email.includes('@') &&
     email.includes('.') &&
     email.indexOf('.') > 0 &&
-    email.lastIndexOf('.') > email.indexOf('.') + 1 &&
-    email.indexOf('@') + 1 < email.lastIndexOf('.')
+    email.indexOf('@') + 1 < email.lastIndexOf('.') &&
+    !email.endsWith('.')
   );
 }
 
@@ -32,7 +32,14 @@ function getUserInput(e) {
   } else if (!validEmail(userInput)) {
     errorText.style.display = 'block';
     errorIcon.style.display = 'block';
+    // resets focus to the input field
+    email.focus();
   } else {
+    errorText.style.display = 'none';
+    errorIcon.style.display = 'none';
+
+    // clears the input field
+    email.value = '';
     // push the user input to the empty array
     emailArray.push(userInput);
 
@@ -46,8 +53,7 @@ function getUserInput(e) {
     errorIcon.style.display = 'none';
     // clears the input field
     email.value = '';
-    // resets focus to the input field
-    email.focus();
+    
   }, 2000);
 }
 
