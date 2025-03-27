@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body {
+  color: hsl(0, 6%, 24%);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.grid-container {
+  padding: 30px 0;
+  max-width: 1440px;
+}
+
+header {
+  margin-left: 30px;
+}
+
+/* main */
+.dsktp-image {
+  display: none;
+}
+
+.dsktp-logo {
+  display: none;
+}
+.mobile-image {
+  width: 100%;
+  margin: 30px 0 60px 0;
+}
+
+.heading {
+  text-align: center;
+  line-height: 1.1;
+}
+
+.light {
+  font-size: 2.3rem;
+  color: hsl(0, 36%, 70%);
+  padding-bottom: 4px;
+  font-weight: 200;
+  letter-spacing: 10px;
+}
+
+.heading h2 {
+  font-size: 2.2rem;
+  padding-bottom: 4px;
+  letter-spacing: 13px;
+  font-weight: 400;
+}
+
+.main-text {
+  margin: 25px 20px;
+  color: hsl(0, 36%, 70%);
+  line-height: 1.7;
+  font-weight: 200;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  border: 0.2px solid hsla(0, 74%, 74%, 0.6);
+  border-radius: 50px;
+  border-left: none;
+  border-right: none;
+  margin: 40px 20px 0 20px;
+}
+
+.slider:focus-within {
+  border: 1px solid hsl(0, 93%, 68%);
+  border-radius: 50px;
+
+  border-right: none;
+}
+
+#btn {
+  background: Linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 70px;
+  height: 40px;
+  padding-top: 3px;
+  border-radius: 50px;
+  border: none;
+}
+
+#btn:hover {
+  cursor: pointer;
+  background: hsl(0, 80%, 86%);
+  box-shadow: 7px 1px 7px 5px hsl(0, 80%, 86%);
+}
+
+/* *** change this on larger screen */
+#error-icon {
+  position: relative;
+  top: 8px;
+  right: -1px;
+  display: none;
+}
+
+#email {
+  border: none;
+  margin-left: 17px;
+  padding-left: 10px;
+  width: 65%;
+}
+
+#email::placeholder {
+  font-size: 11px;
+  color: rgb(152, 150, 150);
+}
+
+#email:focus {
+  outline: none;
+}
+
+#error-text {
+  color: hsl(0, 93%, 68%);
+  margin: 8px 0 10px 50px;
+  font-size: 11px;
+  display: none;
+}
+
+/* footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.attribution a {
+  color: hsl(0, 36%, 70%);
+}
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+  }
+
+  .mobile-image {
+    display: none;
+  }
+  .dsktp-image {
+    display: block;
+    width: 80%;
+  }
+
+  header.logo {
+    display: none;
+  }
+
+  .dsktp-logo {
+    display: block;
+    margin: 20px 0 50px;
+    
+  }
+  .text-section {
+    order: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-img {
+    order: 2;
+    display: flex;
+    justify-content: center;
+  }
+  .heading {
+    text-align: left;
+  }
+  .main-text {
+    max-width: 400px;
+    text-align: left;
+    margin: 0;
+  }
+}
