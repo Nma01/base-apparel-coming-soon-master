@@ -43,6 +43,8 @@ function getUserInput(e) {
     // push the user input to the empty array
     emailArray.push(userInput);
 
+    alert("Thank you! We will contact you shortly.")
+
     // Prints result to the terminal
     console.log(`Valid emails: ${emailArray}`);
   }
